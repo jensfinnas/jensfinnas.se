@@ -1,0 +1,431 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "font-awesome/scss/font-awesome.scss";
+// endbower
+
+/* COLORS */
+$meaning: rgb(131, 196, 193);
+$collaborate: rgb(255, 119, 75);
+$black: #333;
+$gray: #999;
+$grayLight: #ccc;
+
+/* Other variables */
+$breakPointWidth: 655px;
+
+/**
+ * Typography
+ */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600);
+
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+/* Icomoon fonts */ 
+@font-face {
+  font-family: 'icomoon';
+  src:url('/fonts/icomoon.eot?-194yr2');
+  src:url('/fonts/icomoon.eot?#iefix-194yr2') format('embedded-opentype'),
+    url('/fonts/icomoon.woff?-194yr2') format('woff'),
+    url('/fonts/icomoon.ttf?-194yr2') format('truetype'),
+    url('/fonts/icomoon.svg?-194yr2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icomoon-"], [class*=" icomoon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icomoon-collaborate:before {
+  content: "\e600";
+}
+.icomoon-meaning:before {
+  content: "\e601";
+}
+.icomoon-icon-background:before {
+  content: "\e602";
+}
+.mobile-language {
+  display: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+
+body {
+  padding: 0px !important; 
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+.container-fluid {
+  padding: 0;
+}
+code {
+  padding: 0 3px;
+}
+
+pre {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.page-header {
+  margin-top: 60px;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+}
+
+h2 {
+  margin: 20px 0;
+  color: #666;
+}
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/**
+ * Navigation
+ */
+
+.navbar {
+  margin-bottom: 0;
+  border:0;
+  
+  .navbar-inner {
+    padding: 12px;
+    background-color: #FFF;
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    background-image: none;
+    border-bottom: 1px solid rgb(229, 229, 230);
+  }
+  .header-image {
+    margin-right: 15px;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  .header-right {
+    overflow: hidden;
+  }
+  .header-name {
+    font-size: 20px;
+    padding: 4px;
+  }
+  .header-lower {
+    padding: 4px;
+    text-transform: uppercase;
+    color: $meaning;
+    font-size: 12px;
+  }
+  .header-upper {
+    border-bottom: 1px solid rgb(199, 199, 199);
+  }
+  .header-language {
+    font-size: 11px;
+  }
+
+  .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+
+    li {
+      display: table-cell;
+      width: 1%;
+      float: none;
+
+      a {
+        font-weight: bold;
+        text-align: center;
+        //border-left: 1px solid rgba(255, 255, 255, 0.75);
+        border-right: 1px solid rgba(0, 0, 0, .1);
+      }
+      
+      &:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      &:last-child a {
+        border-right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+    }
+  }
+}
+
+
+/**
+ * Footer
+ */
+
+.footer {
+  margin-top: 80px;
+
+  .footer-inner {
+    padding: 40px 0;
+    border-top: 1px solid #DDD;
+  }
+
+  .social {
+    float: right;
+    margin: 0;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 20px;
+
+      a, a:visited {
+        color: $grayLight;
+        text-decoration: none;
+        font-size: 40px;
+
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakPointWidth) {
+  .mobile-language {
+    display: block;
+    font-size: 12px;
+    background-color: #f6f6f7;
+    border-bottom: 1px solid #e5e5e6;
+    text-align: right;
+    padding: 5px;
+    ul {
+      margin: 0;
+    }
+  }
+
+  .navbar {
+    text-align: center;
+
+    .header-image {
+      float: none;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+    .header-upper {
+      border-bottom: 0;
+    }
+    .header-language {
+      display: none;
+    }  
+  }
+  .navbar.min {
+    background-color: red;
+
+    img {
+      display: none;
+    }
+
+  }
+}
+
+
+.inner {
+  max-width: 650px;
+  margin: 0 auto;
+}
+.contacts .icon {
+  margin-right: 12px;
+  color: #808080;
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+}
+/* TOP: The panel with the links to the sections */
+$topIconWidth: 200px; // Defines the size of the section icons
+$topIconHeight: $topIconWidth * 150 / 137;
+$topIcomoonSize: $topIconWidth * 0.55;
+
+#top {
+  background-color: rgb(246, 246, 247);
+  padding: 30px 0;
+  a {
+    text-decoration: none;
+    position: relative;
+  }
+  .top-text {
+    font-size: 20px;
+    color: $black;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    
+    strong {
+      font-weight: normal;
+    }
+  }
+  .top-readmore {
+    font-size: 13px;
+    text-decoration: none !important;
+  }
+}
+/* ICON SET */
+.iconset {
+  position: relative;
+  display: inline-block;
+  width: $topIconWidth;
+  height: $topIconHeight;
+  .icomoon-icon-background {
+      font-size: $topIconHeight;
+  }
+  .top-icon {
+    position: absolute;
+    left: ($topIconWidth - $topIcomoonSize) / 2;
+    top: ($topIconHeight - $topIcomoonSize) / 2;
+    
+    display: inline-block;
+    .icomoon {
+      color: white;
+      font-size: $topIcomoonSize;
+    }
+  }  
+}
+
+
+/* CONTACTS */
+.contacts {
+  padding: 20px 0;
+  font-size: 15px;
+
+  .block {
+    border-right: 1px solid rgb(222, 222, 222);
+  }
+  .block:last-child {
+    border-right: 0;
+  }
+}
+
+/* SECTIONS */
+.section-header {
+  padding: 50px 0;
+  font-weight: 300;
+  color: #fff;
+  font-size: 13px;
+
+  a {
+    color: white;
+    border-bottom: 1px dotted #fff;
+    display: inline-block;
+    text-decoration: none;     
+    cursor: pointer;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 30px;  
+    color: #fff !important;
+  }
+  .link-to-top {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+.section-text {
+  text-align: left;
+  columns: auto 2;
+  -webkit-columns: auto 2;
+  -moz-columns: auto 2;
+}
+
+
+.meaning {
+  .top-text strong, 
+  .icomoon-icon-background,
+  .section-header-container .icomoon {
+    color: $meaning;
+  }
+  .section-header {
+    background-color: $meaning;
+  }
+}
+.collaborate {
+  .top-text strong, 
+  .icomoon-icon-background,
+  .section-header-container .icomoon {
+    color: $collaborate;
+  }
+  .section-header {
+    background-color: $collaborate;
+  }
+}
+.section .icomoon-icon-background{
+  color: #fff;
+}
+/*
+/*  MOBILE */
+@media (max-width: $breakPointWidth) {
+  // Adjust size of icons in top field with links to section */
+  $topIconWidth: 150px; // Defines the size of the section icons
+  $topIconHeight: $topIconWidth * 150 / 137;
+  $topIcomoonSize: $topIconWidth * 0.55;
+  // ICON SET 
+  .iconset {
+    width: $topIconWidth;
+    height: $topIconHeight;
+    .icomoon-icon-background {
+        font-size: $topIconHeight;
+    }
+    .top-icon {
+      left: ($topIconWidth - $topIcomoonSize) / 2;
+      top: ($topIconHeight - $topIcomoonSize) / 2;
+      
+      .icomoon {
+        font-size: $topIcomoonSize;
+      }
+    }  
+  }
+
+  .section-text {
+    text-align: left;
+    columns: auto 1;
+    -webkit-columns: auto 1;
+    -moz-columns: auto 1;
+    padding: 0 40px;
+  }
+
+  .contacts {
+    padding: 0;
+
+    .block {
+    width: 100%;
+    border-right: 0;
+    text-align: left;
+    margin: 0;
+    padding: 17px 20px;
+    border-bottom: 1px solid #ccc;
+    } 
+  }
+}
+

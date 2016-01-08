@@ -1,0 +1,67 @@
+<div class="container-fluid" ng-app="ngBoilerplate"  ng-controller="MainCtrl">
+    <!-- SECTION ICONS --> 
+    <div id="top" class="row">
+      <div class="inner">
+        <div class="col-sm-6 {{section.id}} text-center" ng-repeat="section in sections">
+          
+          <a ng-href="#/?scroll={{section.id}}">
+            <div class="iconset">
+              <span class="icomoon-icon-background"></span>
+              <div class="top-icon"><span class="icomoon icomoon-{{section.id}}"></span></div>
+            </div>
+<!--            <div class="top-text" ng-bind-html-unsafe="section.title"></div>-->
+            <div class="top-text" translate="{{ section.id.toUpperCase() + '_TITLE' }}"></div>
+            <div class="top-readmore">> <span translate='READ-MORE'></span></div>
+
+          </a>
+        </div>
+      </div>  
+    </div>
+    
+    <div class="contacts">
+      <div class="inner">
+        <div class="row">
+          <div class="col-sm-4 text-center block">
+            <a href="mailto:jens.finnas@gmail.com">
+              <i class="fa fa-envelope icon"></i> jens.finnas@gmail.com
+            </a>
+          </div>
+          <div class="col-sm-4 text-center block">
+            <a href="http://www.twitter.com/jensfinnas" target="_blank">
+             <i class="fa fa-twitter icon"></i> jensfinnas</div>
+            </a>
+          <div class="col-sm-4 text-center block">
+              <i class="fa fa-phone icon"></i> +46 (0) 76 901 7438
+          </div>
+        </div>      
+      </div>
+    </div>
+
+    <div ng-repeat="section in sections">
+
+      <div class="section {{section.id}}" id="{{section.id}}" scroll-on-click>
+        <div class="row section-header">
+          <div class="inner">
+            <div class="section-header-container">
+              <div class="col-sm-12 text-center">
+                <div class="iconset">
+                  <span class="icomoon-icon-background"></span>
+                  <div class="top-icon"><span class="icomoon icomoon-{{section.id}}"></span></div>
+                </div>
+                <h2 class="section-title" translate="{{ section.id.toUpperCase() + '_TITLE' }}"></h2>
+                <div class="section-text" translate="{{ section.id.toUpperCase() + '_TEXT' }}"></div>
+
+              </div>           
+              <div class="link-to-top col-sm-12 text-center">
+
+               <div><a onclick='javascript:$("body,html").animate({scrollTop: 0}, "slow");' translate='BACK-TO-TOP'></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+           
+          <!-- <a ng-href="#/?scroll=top">To top</a> -->
+      </div>
+    </div>
+
+  </div>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="I'm a journalist and data hacker. Proud founder of Journalism++ Stockholm.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@jensfinnas">
+    <meta name="twitter:title" content="Jens Finnäs | Data journalist">
+    <meta name="twitter:description" content="I'm a journalist and data hacker based in Stockholm Sweden. Proud founder of Journalism++ Stockholm.">
+    <meta name="twitter:creator" content="@jensfinnas">
+    <meta name="twitter:image:src" content="http://jensfinnas.se/assets/images/jens2.jpg">
+    <meta property="og:title" content="Jens Finnäs | Data journalist" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://jensfinnas.se" />
+    <meta property="og:image" content="http://jensfinnas.se/assets/images/jens2.jpg" />
+    <meta property="og:description" content="I'm a journalist and data hacker. Proud founder of Journalism++ Stockholm.">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="jensfinnasseApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- HEADER -->
+    <div class="mobile-language">
+                <ul class="list-inline" ng-controller="LangCtrl">
+                  <li><a href="" ng-click="changeLang('en')">English</a></li>
+                  <li><a href="" ng-click="changeLang('sv')">Svenska</a></li>
+                </ul>
+    </div>
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container-fluid inner">
+          <!-- Image -->
+          <div class="header-image pull-left">
+             <img src="/images/jens.jpg" class="img-circle">
+          </div>
+          <div class="header-right">
+            <div class="header-upper">
+              <!-- Language -->
+              <div class="header-language pull-right">
+                <ul class="list-inline" ng-controller="LangCtrl">
+                  <li><a href="" ng-click="changeLang('en')">English</a></li>
+                  <li><a href="" ng-click="changeLang('sv')">Svenska</a></li>
+                </ul>
+              </div>
+              <!-- Contact icons -->
+              <!-- <div class="header-contact pull-right">
+                <i class="icon-envelope icon-2x"></i>
+                <i class="icon-facebook icon-2x"></i> 
+                <i class="icon-twitter icon-2x"></i> 
+                <i class="icon-linkedin icon-2x"></i> 
+              </div> -->
+              <!-- Name -->
+              <div class="header-name">Jens Finnäs</div>
+            </div>
+            <!-- Title -->
+            <div class="header-lower">
+              {{'JOB-TITLE' | translate}}
+            </div>         
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- MAIN -->
+    <div class="container-fluid">
+      <div ng-view=""></div>
+    </div>
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/lang.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
